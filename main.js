@@ -53,7 +53,7 @@ var CommentList = React.createClass({
           return (
             <div>
         Comment:{comment.content}<br/>
-        Auther:{comment.auther}<hr />
+        Auther:{comment.author}<hr />
         </div>
               );
         });
