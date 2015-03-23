@@ -25,11 +25,13 @@ var CommentList = React.createClass({
           loadingFlag:false,
           page:nextPage
         });
+        loading("off");
       }
     }.bind(this));
 	},
 	componentDidMount: function(){
       //to load comments initially
+      loading("on");
    		this.getComment();
   	},
   	handleScroll:function(e){
@@ -43,6 +45,7 @@ var CommentList = React.createClass({
           this.setState({
             loadingFlag:true,  
           });
+          loading("on");
           this.getComment();
       }
     }
@@ -64,6 +67,9 @@ var CommentList = React.createClass({
 
 
 });
+
+
+
 
 
 React.render(
